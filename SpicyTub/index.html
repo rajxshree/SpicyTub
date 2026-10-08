@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SpicyTub | Authentic Indian Flavours, Served with Passion</title>
+  <meta name="description" content="Experience rich spices, traditional recipes, royal Dum Biriyani, charcoal tandoori feasts and unforgettable flavours at SpicyTub Indian Restaurant.">
+  <meta name="keywords" content="SpicyTub, Indian Restaurant, Biriyani, Tandoori Chicken, South Indian meals, North Indian curries, Bangalore dining">
+
+  <!-- Google Fonts: Playfair Display (Serif) & Outfit (Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =================================================================
+       PAGE PRELOADER
+  ================================================================== -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-spinner"></div>
+    <div class="preloader-text">Spicy<span>Tub</span></div>
+    <div style="font-size: 0.8rem; color: var(--color-gold); letter-spacing: 2px; text-transform: uppercase; margin-top: 6px;">
+      Simmering Flavours...
+    </div>
+  </div>
+
+  <!-- =================================================================
+       STICKY NAVIGATION BAR
+  ================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#home" class="brand-logo" aria-label="SpicyTub Home">
+        <div class="brand-icon">
+          <i class="fa-solid fa-pepper-hot"></i>
+        </div>
+        <div class="brand-text">
+          <div class="brand-name">Spicy<span>Tub</span></div>
+          <div class="brand-sub">Indian Restaurant</div>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links" id="desktop-nav">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#specialities" class="nav-link">Specialities</a>
+        <a href="#signature" class="nav-link">Signatures</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="#offers" class="nav-link">Offers</a>
+        <a href="#gallery" class="nav-link">Gallery</a>
+        <a href="#reviews" class="nav-link">Reviews</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions">
+        <a href="#reservation" class="btn btn-primary btn-sm btn-book-desktop">
+          <i class="fa-regular fa-calendar-check"></i> Book a Table
+        </a>
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-nav" id="mobile-nav-drawer">
+    <div class="brand-logo" style="margin-bottom: 24px;">
+      <div class="brand-icon">
+        <i class="fa-solid fa-pepper-hot"></i>
+      </div>
+      <div class="brand-text">
+        <div class="brand-name">Spicy<span>Tub</span></div>
+        <div class="brand-sub">Indian Restaurant</div>
+      </div>
+    </div>
+    <nav class="mobile-nav-links">
+      <a href="#home" class="mobile-nav-link">Home</a>
+      <a href="#about" class="mobile-nav-link">About SpicyTub</a>
+      <a href="#specialities" class="mobile-nav-link">Our Specialities</a>
+      <a href="#signature" class="mobile-nav-link">Signature Dishes</a>
+      <a href="#menu" class="mobile-nav-link">Interactive Menu</a>
+      <a href="#offers" class="mobile-nav-link">Today's Specials</a>
+      <a href="#gallery" class="mobile-nav-link">Restaurant Gallery</a>
+      <a href="#reviews" class="mobile-nav-link">Guest Reviews</a>
+      <a href="#contact" class="mobile-nav-link">Find Us & Contact</a>
+    </nav>
+    <a href="#reservation" class="btn btn-primary" style="width: 220px; text-align: center;">
+      <i class="fa-regular fa-calendar-check"></i> Book a Table
+    </a>
+  </div>
+
+  <!-- =================================================================
+       HERO SECTION
+  ================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="hero-bg-container">
+      <img 
+        src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?auto=format&fit=crop&w=1920&q=85" 
+        alt="Royal Indian Cuisine Spices and Biriyani" 
+        class="hero-bg-image"
+      >
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Animated spice particles -->
+    <canvas id="particles-canvas"></canvas>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <i class="fa-solid fa-fire-flame-curved"></i> Royal Indian Gastronomy
+      </div>
+      <h1 class="hero-title text-gradient">
+        Authentic Indian Flavours, <br>Served with Passion
+      </h1>
+      <p class="hero-description">
+        “Experience rich spices, traditional recipes and unforgettable flavours at SpicyTub.”
+      </p>
+      <div class="hero-actions">
+        <a href="#reservation" class="btn btn-primary">
+          <i class="fa-regular fa-calendar-check"></i> Book a Table
+        </a>
+        <a href="#menu" class="btn btn-outline">
+          <i class="fa-solid fa-utensils"></i> View Menu
+        </a>
+        <a href="#" id="hero-wa-btn" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <!-- Scroll Down Icon -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- =================================================================
+       ABOUT SECTION
+  ================================================================== -->
+  <section class="section-padding about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images-wrapper reveal">
+          <div class="about-img-main">
+            <img 
+              src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1000&q=80" 
+              alt="SpicyTub Luxury Dining Area"
+            >
+          </div>
+          <div class="about-img-secondary">
+            <img 
+              src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?auto=format&fit=crop&w=800&q=80" 
+              alt="SpicyTub Master Chef preparing spiced clay pot delicacies"
+            >
+          </div>
+          <div class="about-badge-exp">
+            <i class="fa-solid fa-award"></i>
+            <span>
+              <strong>10+ Years</strong>
+              <small>Culinary Mastery</small>
+            </span>
+          </div>
+        </div>
+
+        <div class="about-text reveal">
+          <div class="section-tag">
+            <i class="fa-solid fa-utensils"></i> Our Heritage
+          </div>
+          <h2>Where Every Bite Tells a Story</h2>
+          <p>
+            Welcome to <strong>SpicyTub</strong>, where the regal heritage of Indian culinary craft meets 
+            contemporary dining sophistication. Born from a reverence for ancient spice routes, hand-ground 
+            masalas, and patient slow-fire techniques, our kitchen celebrates the glorious breadth of Indian food culture.
+          </p>
+          <p>
+            From the fragrant saffron dum pots of Hyderabad to the sun-soaked mustard fields of Punjab and 
+            the coastal pepper groves of Malabar, every recipe is hand-crafted with pure desi ghee, organic whole spices, 
+            and farm-fresh ingredients. At SpicyTub, we do not merely serve food—we craft unforgettable memories around the dining table.
+          </p>
+
+          <!-- Animated Statistics -->
+          <div class="stats-grid" id="about-stats-grid">
+            <!-- Dynamically populated from config.js -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       OUR SPECIALITIES
+  ================================================================== -->
+  <section class="section-padding specialities-section" id="specialities" style="background: rgba(18, 18, 22, 0.4);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-bowl-food"></i> Culinary Journey
+        </div>
+        <h2 class="section-title">Our Specialities</h2>
+        <p class="section-desc">
+          Explore eight distinctive culinary journeys curated by our master chefs, celebrating the soul of Indian kitchens.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-clover"></i></div>
+      </div>
+
+      <div class="specialities-grid" id="specialities-grid">
+        <!-- Dynamically populated from config.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       SIGNATURE DISHES
+  ================================================================== -->
+  <section class="section-padding signature-section" id="signature">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-crown"></i> Chef’s Masterpieces
+        </div>
+        <h2 class="section-title">Signature Dishes</h2>
+        <p class="section-desc">
+          Celebrated across the city—slow-cooked dum biriyanis, melt-in-mouth charcoal roasts, and velvet curries.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-pepper-hot"></i></div>
+      </div>
+
+      <div class="signature-grid" id="signature-dishes-grid">
+        <!-- Dynamically populated from config.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       INTERACTIVE MENU SECTION
+  ================================================================== -->
+  <section class="section-padding menu-section" id="menu">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-book-open"></i> Taste The Magic
+        </div>
+        <h2 class="section-title">Explore Our Menu</h2>
+        <p class="section-desc">
+          Filter through our hand-curated menu, search your favourite dish, and order directly on WhatsApp.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-mortar-pestle"></i></div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="menu-filter-container reveal">
+        <button class="menu-filter-btn active" data-category="all">All Dishes</button>
+        <button class="menu-filter-btn" data-category="starters">Starters</button>
+        <button class="menu-filter-btn" data-category="biriyani">Biriyani</button>
+        <button class="menu-filter-btn" data-category="main-course">Main Course</button>
+        <button class="menu-filter-btn" data-category="south-indian">South Indian</button>
+        <button class="menu-filter-btn" data-category="north-indian">North Indian</button>
+        <button class="menu-filter-btn" data-category="tandoor">Tandoor</button>
+        <button class="menu-filter-btn" data-category="desserts">Desserts</button>
+        <button class="menu-filter-btn" data-category="beverages">Beverages</button>
+      </div>
+
+      <!-- Search & Veg/Non-Veg Filter Toolbar -->
+      <div class="menu-search-veg-bar reveal">
+        <div class="menu-search-box">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" id="menu-search-input" placeholder="Search dishes (e.g., Paneer, Biriyani, Naan)...">
+        </div>
+
+        <div class="menu-type-filters">
+          <button class="type-filter-btn active" data-type="all">All</button>
+          <button class="type-filter-btn" data-type="veg">
+            <span class="veg-icon"></span> Pure Veg
+          </button>
+          <button class="type-filter-btn" data-type="nonveg">
+            <span class="nonveg-icon"></span> Non-Veg
+          </button>
+        </div>
+      </div>
+
+      <!-- Menu Items Grid -->
+      <div class="menu-grid" id="menu-items-grid">
+        <!-- Dynamically populated from config.js -->
+      </div>
+
+      <!-- Prominent View Full Menu Button -->
+      <div class="menu-view-full-wrap reveal">
+        <a href="#reservation" class="btn btn-gold btn-lg">
+          <i class="fa-solid fa-receipt"></i> View Full Menu & Reserve Table
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       TODAY'S SPECIAL OFFERS
+  ================================================================== -->
+  <section class="section-padding offers-section" id="offers">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-tags"></i> Limited Time Delights
+        </div>
+        <h2 class="section-title">Today’s Special Offers</h2>
+        <p class="section-desc">
+          Treat your family, friends, or that special someone to our hand-crafted multi-course feasts at irresistible prices.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-gift"></i></div>
+      </div>
+
+      <div class="offers-grid" id="offers-grid">
+        <!-- Dynamically populated from config.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       TABLE RESERVATION SECTION
+  ================================================================== -->
+  <section class="section-padding reservation-section" id="reservation">
+    <div class="container">
+      <div class="reservation-wrapper reveal">
+        <!-- Left Banner -->
+        <div class="reservation-info">
+          <div class="reservation-info-content">
+            <div class="section-tag" style="background: rgba(229,169,60,0.15); margin-bottom: 12px;">
+              <i class="fa-regular fa-clock"></i> Seamless Booking
+            </div>
+            <h3>Reserve Your Table</h3>
+            <p>
+              Whether it’s an intimate candlelit dinner, a bustling family reunion, or a corporate luncheon, 
+              we assure you a reserved seat and heartfelt hospitality at SpicyTub.
+            </p>
+
+            <div class="res-features">
+              <div class="res-feature-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div>
+                  <strong>Guaranteed Seating</strong>
+                  <small>No waiting in line when you book in advance</small>
+                </div>
+              </div>
+              <div class="res-feature-item">
+                <i class="fa-solid fa-bell-concierge"></i>
+                <div>
+                  <strong>Custom Spice Preferences</strong>
+                  <small>Our chefs personalize heat levels to your taste</small>
+                </div>
+              </div>
+              <div class="res-feature-item">
+                <i class="fa-solid fa-champagne-glasses"></i>
+                <div>
+                  <strong>Special Occasions</strong>
+                  <small>Complimentary table decor for birthdays & anniversaries</small>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="res-direct-wa">
+            <div>
+              <strong style="color: #fff; display: block; font-size: 0.95rem;">Prefer Instant Chat?</strong>
+              <span>Book instantly with our concierge on WhatsApp</span>
+            </div>
+            <a href="#" id="direct-reserve-wa" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-sm">
+              <i class="fa-brands fa-whatsapp"></i> Chat Now
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Form -->
+        <div class="reservation-form-container">
+          <h4>Make a Reservation</h4>
+          <p>Fill out the form below. Details will be automatically redirected to WhatsApp for instant confirmation.</p>
+
+          <form id="reservation-form">
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="res-name">Full Name <span>*</span></label>
+                <input type="text" id="res-name" class="form-control" placeholder="e.g. Ramesh Kumar" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-phone">Phone Number <span>*</span></label>
+                <input type="tel" id="res-phone" class="form-control" placeholder="e.g. +91 98765 43210" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-email">Email Address</label>
+                <input type="email" id="res-email" class="form-control" placeholder="e.g. ramesh@example.com">
+              </div>
+
+              <div class="form-group">
+                <label for="res-guests">Number of Guests <span>*</span></label>
+                <select id="res-guests" class="form-control" required>
+                  <option value="1 Person">1 Person</option>
+                  <option value="2 Persons" selected>2 Persons (Couple)</option>
+                  <option value="3-4 Persons">3 - 4 Persons (Small Group)</option>
+                  <option value="5-8 Persons">5 - 8 Persons (Family)</option>
+                  <option value="9+ Persons (Party)">9+ Persons (Banquet / Group)</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="res-date">Reservation Date <span>*</span></label>
+                <input type="date" id="res-date" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label for="res-time">Preferred Time <span>*</span></label>
+                <select id="res-time" class="form-control" required>
+                  <option value="12:30 PM">12:30 PM (Lunch)</option>
+                  <option value="01:30 PM">01:30 PM (Lunch)</option>
+                  <option value="02:30 PM">02:30 PM (Lunch)</option>
+                  <option value="07:00 PM">07:00 PM (Dinner)</option>
+                  <option value="08:00 PM" selected>08:00 PM (Dinner)</option>
+                  <option value="09:00 PM">09:00 PM (Dinner)</option>
+                  <option value="10:00 PM">10:00 PM (Late Dinner)</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="res-seating">Seating Preference</label>
+                <select id="res-seating" class="form-control">
+                  <option value="Indoor AC Dining Lounge" selected>Indoor AC Dining Lounge (Romantic & Quiet)</option>
+                  <option value="Family Private Booth">Family Private Booth</option>
+                  <option value="Outdoor Veranda">Outdoor Veranda Garden</option>
+                  <option value="Near Chef Live Tandoor">Near Chef Live Tandoor</option>
+                </select>
+              </div>
+
+              <div class="form-group full-width">
+                <label for="res-special">Special Request (Optional)</label>
+                <textarea id="res-special" class="form-control" placeholder="Birthday cake arrangement, high chair for infant, low spice preference, etc."></textarea>
+              </div>
+            </div>
+
+            <div id="reservation-feedback" class="form-feedback"></div>
+
+            <div style="margin-top: 24px;">
+              <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px;">
+                <i class="fa-solid fa-paper-plane"></i> Confirm Reservation
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       GALLERY SECTION (With Lightbox)
+  ================================================================== -->
+  <section class="section-padding gallery-section" id="gallery" style="background: rgba(18, 18, 22, 0.4);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-regular fa-image"></i> Visual Splendour
+        </div>
+        <h2 class="section-title">SpicyTub Gallery</h2>
+        <p class="section-desc">
+          A glimpse into our royal dining spaces, fiery live charcoal tandoors, and hand-garnished dishes.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-camera-retro"></i></div>
+      </div>
+
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Dynamically populated from config.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Lightbox Modal -->
+  <div class="lightbox-modal" id="lightbox-modal">
+    <div class="lightbox-content">
+      <span class="lightbox-close" id="lightbox-close">&times;</span>
+      <div class="lightbox-nav lightbox-prev" id="lightbox-prev"><i class="fa-solid fa-chevron-left"></i></div>
+      <img src="" alt="Enlarged gallery item" class="lightbox-img" id="lightbox-img">
+      <div class="lightbox-nav lightbox-next" id="lightbox-next"><i class="fa-solid fa-chevron-right"></i></div>
+      <div class="lightbox-caption" id="lightbox-caption"></div>
+    </div>
+  </div>
+
+  <!-- =================================================================
+       CUSTOMER REVIEWS (Testimonials)
+  ================================================================== -->
+  <section class="section-padding reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-quote-left"></i> Verified Diners
+        </div>
+        <h2 class="section-title">What Our Guests Say</h2>
+        <p class="section-desc">
+          Rated 4.8★ by thousands of families, gourmands, and food enthusiasts across the city.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-star"></i></div>
+      </div>
+
+      <div class="reviews-carousel-wrapper reveal">
+        <div class="reviews-slider" id="reviews-slider">
+          <!-- Dynamically populated from config.js -->
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Controls -->
+      <div class="carousel-controls">
+        <button class="carousel-btn" id="carousel-prev" aria-label="Previous review">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <div class="carousel-dots" id="carousel-dots">
+          <!-- Dynamically populated -->
+        </div>
+        <button class="carousel-btn" id="carousel-next" aria-label="Next review">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       INSTAGRAM FEED SECTION
+  ================================================================== -->
+  <section class="section-padding instagram-section" id="instagram" style="padding-top: 40px; padding-bottom: 60px;">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom: 40px;">
+        <div class="section-tag">
+          <i class="fa-brands fa-instagram"></i> Live Moments
+        </div>
+        <h2 class="section-title">Follow SpicyTub</h2>
+        <p class="section-desc">
+          Catch behind-the-scenes tandoori sizzles, secret spice recipes, and guest celebrations on our Instagram handle.
+        </p>
+      </div>
+
+      <div class="instagram-grid" id="instagram-grid">
+        <!-- Dynamically populated from config.js -->
+      </div>
+
+      <div class="insta-cta-wrap reveal">
+        <a href="#" class="btn btn-outline link-instagram" target="_blank" rel="noopener noreferrer">
+          <i class="fa-brands fa-instagram"></i> Follow us on Instagram
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       FIND US & CONTACT SECTION (With Google Maps Embed)
+  ================================================================== -->
+  <section class="section-padding contact-section" id="contact" style="background: rgba(18, 18, 22, 0.4);">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="section-tag">
+          <i class="fa-solid fa-location-dot"></i> Visit Us
+        </div>
+        <h2 class="section-title">Find Us & Contact</h2>
+        <p class="section-desc">
+          Located in the heart of the culinary boulevard. Drop in for lunch, dinner, or a fragrant late-night feast.
+        </p>
+        <div class="motif-divider"><i class="fa-solid fa-map-pin"></i></div>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Left Contact Info Card -->
+        <div class="contact-info-card reveal">
+          <div class="contact-meta-list">
+            <div class="contact-meta-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <strong>Our Address</strong>
+                <p id="contact-address">Near Central Railway Station, Kannappar Thidal, Periamet, Chennai, Tamil Nadu 600003</p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <strong>Opening Hours</strong>
+                <p id="contact-hours">
+                  Lunch: 12:00 PM – 03:30 PM<br>
+                  Dinner: 07:00 PM – 11:30 PM<br>
+                  Open Monday – Sunday
+                </p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="contact-icon-box">
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <strong>Phone Reservations</strong>
+                <p><a href="tel:+916385151563" id="contact-phone">+91 63851 51563</a></p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="contact-icon-box">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <strong>WhatsApp Concierge</strong>
+                <p><a href="#" id="contact-wa" target="_blank" rel="noopener noreferrer">+91 63851 51563</a></p>
+              </div>
+            </div>
+
+            <div class="contact-meta-item">
+              <div class="contact-icon-box">
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+              <div>
+                <strong>Email Inquiries</strong>
+                <p><a href="mailto:reservations@spicytub.com" id="contact-email">reservations@spicytub.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-action-btns">
+            <a href="tel:+916385151563" class="btn btn-primary">
+              <i class="fa-solid fa-phone"></i> Call Now
+            </a>
+            <a href="#" id="directions-btn" target="_blank" rel="noopener noreferrer" class="btn btn-gold">
+              <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Map Container -->
+        <div class="map-container reveal">
+          <iframe 
+            id="maps-iframe" 
+            src="" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="SpicyTub Restaurant Google Maps Location"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       FOOTER
+  ================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1: Brand Info -->
+        <div class="footer-col footer-brand">
+          <div class="brand-logo">
+            <div class="brand-icon">
+              <i class="fa-solid fa-pepper-hot"></i>
+            </div>
+            <div class="brand-text">
+              <div class="brand-name">Spicy<span>Tub</span></div>
+              <div class="brand-sub">Indian Restaurant</div>
+            </div>
+          </div>
+          <p class="footer-about-text">
+            Celebrating centuries-old culinary heritage, fragrant royal saffron dum biriyanis, 
+            and authentic regional Indian flavours in an intimate luxury setting.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-btn link-instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="#" class="footer-social-btn link-facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" id="footer-wa-link" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="#" id="footer-maps-link" class="footer-social-btn" target="_blank" rel="noopener noreferrer" aria-label="Google Maps">
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="#about" class="footer-link"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="#specialities" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Our Specialities</a></li>
+            <li><a href="#signature" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Signature Dishes</a></li>
+            <li><a href="#reservation" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Book a Table</a></li>
+            <li><a href="#contact" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Contact & Directions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Menu Links -->
+        <div class="footer-col">
+          <h4>Menu Links</h4>
+          <ul class="footer-links">
+            <li><a href="#menu" onclick="filterMenuCategory('biriyani')" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Dum Biriyani</a></li>
+            <li><a href="#menu" onclick="filterMenuCategory('tandoor')" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Charcoal Tandoor</a></li>
+            <li><a href="#menu" onclick="filterMenuCategory('south-indian')" class="footer-link"><i class="fa-solid fa-chevron-right"></i> South Indian Feasts</a></li>
+            <li><a href="#menu" onclick="filterMenuCategory('north-indian')" class="footer-link"><i class="fa-solid fa-chevron-right"></i> North Indian Curries</a></li>
+            <li><a href="#menu" onclick="filterMenuCategory('desserts')" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Royal Desserts</a></li>
+            <li><a href="#menu" onclick="filterMenuCategory('beverages')" class="footer-link"><i class="fa-solid fa-chevron-right"></i> Mango Lassi & Drinks</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Timings & Location -->
+        <div class="footer-col">
+          <h4>Dining Hours</h4>
+          <div class="footer-timings-list">
+            <div>
+              <strong>Lunch Buffet & A La Carte</strong>
+              <span>12:00 PM – 03:30 PM</span>
+            </div>
+            <div>
+              <strong>Dinner & Candlelight Service</strong>
+              <span>07:00 PM – 11:30 PM</span>
+            </div>
+            <div>
+              <strong>Service Days</strong>
+              <span style="color: var(--color-gold);">Open All 7 Days (Mon – Sun)</span>
+            </div>
+            <div style="margin-top: 10px;">
+              <a href="#reservation" class="btn btn-gold btn-sm">
+                <i class="fa-regular fa-calendar-check"></i> Book Online
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 <strong>SpicyTub</strong>. All Rights Reserved. Crafted with authenticity & passion.
+        </div>
+        <div style="display:flex; gap: 20px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">FSSAI Lic. #11223344556677</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =================================================================
+       FLOATING ACTIONS (WhatsApp Button & Back to Top)
+  ================================================================== -->
+  <div class="floating-actions">
+    <button class="btn-back-to-top" id="back-to-top-btn" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <a href="#" id="floating-wa-btn" class="btn-floating-wa" target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span class="wa-tooltip">Chat with SpicyTub</span>
+    </a>
+  </div>
+
+  <!-- =================================================================
+       MOBILE BOTTOM ACTION BAR (Sticky Bar for Mobile Users)
+  ================================================================== -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:+916385151563" id="mobile-bottom-call">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call Us</span>
+    </a>
+    <a href="#reservation" class="book-btn-mobile">
+      <i class="fa-regular fa-calendar-check"></i>
+      <span>Book Table</span>
+    </a>
+    <a href="#" id="mobile-bottom-wa" target="_blank" rel="noopener noreferrer">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </a>
+    <a href="#menu">
+      <i class="fa-solid fa-utensils"></i>
+      <span>Menu</span>
+    </a>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
